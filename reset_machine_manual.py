@@ -750,7 +750,7 @@ class MachineIDResetter:
                 return False
 
             print(f"{Fore.CYAN}{EMOJI['FILE']} {self.translator.get('reset.reading')}...{Style.RESET_ALL}")
-            with open(self.db_path, "r", encoding="utf-8-sig") as f:
+            with open(self.db_path, "r", encoding="utf-8") as f:
                 config = json.load(f)
 
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
