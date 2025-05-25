@@ -581,7 +581,7 @@ class MachineIDResetter:
             raise NotImplementedError(f"Not Supported OS: {sys.platform}")
 
         # Save any changes to config file
-        with open(config_file, 'w', encoding='utf-8') as f:
+        with open(config_file, 'w', encoding='utf-8-sig') as f:
             config.write(f)
 
     def generate_new_ids(self):
